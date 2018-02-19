@@ -16,6 +16,7 @@ OpenGL bindings for React Native to implement complex effects over images and co
 [**doc**](https://github.com/ProjectSeptemberInc/gl-react/tree/master/docs)
 
 Props for ImageFilters component
+
 | Name | Description | Type | Required | Default Value |
 | :--- | :----- | :--- | :---: | :---: |
 | children | Inner component or url for image | Any |  |  |
