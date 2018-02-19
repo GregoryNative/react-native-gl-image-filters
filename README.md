@@ -9,7 +9,7 @@ OpenGL bindings for React Native to implement complex effects over images and co
   - sharpen
   - tempreture.
 
-![](https://github.com/GregoryNative/react-native-gl-image-filters/saytama_example.gif)
+![](https://github.com/GregoryNative/react-native-gl-image-filters/blob/master/saytama_example.gif)
 
 **`gl-react-native` is an implementation of `gl-react` for `react-native`. Please [read the main gl-react README](https://github.com/ProjectSeptemberInc/gl-react/) for more information.**
 
