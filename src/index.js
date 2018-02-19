@@ -38,7 +38,7 @@ export default GL.createComponent(
           >
             <Blur factor={blur} passes={4} height={height} width={width}>
               <Sharpen factor={sharpen} height={height} width={width}>
-                https://i.imgur.com/3On9QEu.jpg
+                {children}
               </Sharpen>
             </Blur>
           </ContrastSaturationBrightness>

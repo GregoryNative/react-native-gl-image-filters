@@ -36,11 +36,13 @@ Props for ImageFilters component
 
 ```
 npm i --save gl-react-native
+npm i --save gl-react
 npm i --save react-native-gl-image-filters
 ```
 or
 ```
 yarn add gl-react-native
+yarn add gl-react
 yarn add react-native-gl-image-filters
 ```
 
