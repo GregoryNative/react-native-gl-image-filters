@@ -1,0 +1,8 @@
+rootProject.name = 'imagefilters'
+include ':gl-react-native'
+project(':gl-react-native').projectDir = new File(rootProject.projectDir, '../node_modules/gl-react-native/android')
+
+include ':app'
+
+include ':RNGL'
+project(':RNGL').projectDir = file('../node_modules/gl-react-native/android')
