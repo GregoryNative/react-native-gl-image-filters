@@ -1,24 +1,31 @@
-import GL from "gl-react";
+import { Shaders, Node, GLSL } from "gl-react";
 import React from "react";
-import PropTypes from "prop-types";
 
-import createGLComponent from "../utils/createGLComponent";
+const shaders = Shaders.create({
+  negative: {
+    frag: GLSL`
+      precision highp float;
+      varying vec2 uv;
+      uniform sampler2D t;
+      uniform float factor;
+      
+      void main() {
+        vec4 c = texture2D(t, uv);
 
-export default createGLComponent({
-  displayName: "Negative",
-  defaultProps: { factor: 1 },
-  propTypes: { factor: PropTypes.number },
-  frag: `
-    precision highp float;
-    varying vec2 uv;
-    uniform sampler2D t;
-    uniform float factor;
-    
-    void main() {
-      vec4 c = texture2D(t, uv);
-
-      gl_FragColor = vec4(mix(c.rgb, 1.0 - c.rgb, factor), c.a);
-    }
-  `,
-  receiveValues: ["factor"]
+        gl_FragColor = vec4(mix(c.rgb, 1.0 - c.rgb, factor), c.a);
+      }
+    `
+  }
 });
+
+export default function Negative({ factor = 0, children: t }) {
+  return (
+    <Node
+      shader={shaders.negative}
+      uniforms={{
+        factor,
+        t,
+      }}
+    />
+  )
+}

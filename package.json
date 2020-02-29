@@ -1,6 +1,6 @@
 {
   "name": "react-native-gl-image-filters",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "React-Native image filters using gl-react",
   "main": "lib/index.js",
   "scripts": {
@@ -18,11 +18,10 @@
   },
   "homepage": "https://github.com/GregoryNative/react-native-gl-image-filters#readme",
   "peerDependencies": {
-    "gl-react": "~2.2.0",
-    "gl-react-native": "2.48.0"
-  },
-  "dependencies": {
-    "prop-types": "15.6.0"
+    "buffer": "^5.4.3",
+    "gl-react": "^4.0.1",
+    "gl-react-native": "^4.0.1",
+    "react-native-unimodules": "^0.7.0"
   },
   "devDependencies": {
     "babel-cli": "6.4.5",

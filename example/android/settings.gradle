@@ -1,6 +1,8 @@
 rootProject.name = 'imagefilters'
 
-include ':app'
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
 
-include ':gl-react-native'
-project(':gl-react-native').projectDir = new File(rootProject.projectDir, '../node_modules/gl-react-native/android')
+apply from: '../node_modules/react-native-unimodules/gradle.groovy'
+includeUnimodulesProjects()
+
+include ':app'

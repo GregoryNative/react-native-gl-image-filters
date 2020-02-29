@@ -1,12 +1,11 @@
-import GL from "gl-react";
+import { Shaders, Node, GLSL } from "gl-react";
 import React from "react";
-import PropTypes from "prop-types";
 
 import directionForPassDefault from "../utils/directionForPassDefault";
 
-const shaders = GL.Shaders.create({
+const shaders = Shaders.create({
   blur: {
-    frag: `
+    frag: GLSL`
       precision highp float;
       varying vec2 uv;
       uniform sampler2D t;
@@ -31,25 +30,22 @@ const shaders = GL.Shaders.create({
   }
 });
 
-export default GL.createComponent(
-({
+export default function Blur({ 
   width,
   height,
-  pixelRatio,
-  factor,
+  factor = 0,
   children,
-  passes,
-  directionForPass
-}) => {
+  passes = 2,
+  directionForPass = directionForPassDefault
+}) {
   const rec = pass =>
     pass <= 0 ? (
       children
     ) : (
-      <GL.Node
+      <Node
         shader={shaders.blur}
         width={width}
         height={height}
-        pixelRatio={pixelRatio}
         uniforms={{
           direction: directionForPass(pass, factor, passes),
           resolution: [width, height],
@@ -59,20 +55,4 @@ export default GL.createComponent(
     );
 
   return rec(passes);
-},
-{
-  displayName: "Blur",
-  defaultProps: {
-    passes: 2,
-    directionForPass: directionForPassDefault
-  },
-  propTypes: {
-    factor: PropTypes.number.isRequired,
-    children: PropTypes.any.isRequired,
-    passes: PropTypes.number,
-    directionForPass: PropTypes.func,
-    width: PropTypes.any,
-    height: PropTypes.any,
-    pixelRatio: PropTypes.number
-  }
-});
+}
