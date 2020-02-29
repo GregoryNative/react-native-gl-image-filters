@@ -58,13 +58,22 @@ const settings = [
 ];
 
 export default class App extends Component {
-  state = settings.reduce((result, value) => {
-    result[value] = 0;
-    return result;
-  }, {});
+  state = {
+    ...settings,
+    hue: 0,
+    blur: 0,
+    sepia: 0,
+    sharpen: 0,
+    negative: 0,
+    contrast: 1,
+    saturation: 1,
+    brightness: 1,
+    temperature: 6500,
+  };
 
-  saveImage = () => {
-    this.refs.filtered_image.captureFrame().then(console.warn);
+  saveImage = async () => {
+    const result = await this.refs.filtered_image.glView.capture();
+    console.warn(result);
   };
 
   render() {
@@ -76,9 +85,9 @@ export default class App extends Component {
           </Body>
         </Header>
         <Content style={styles.content} showsVerticalScrollIndicator={false}>
-          <Surface preload width={width} height={width} ref="filtered_image">
-            <ImageFilters {...this.state}>
-              https://vk.vkfaces.com/639827/v639827987/67cbc/aODwAJMQ8jM.jpg
+          <Surface style={{ width, height: width }} ref="filtered_image">
+            <ImageFilters {...this.state} width={width} height={width}>
+              {{ uri: 'https://i.imgur.com/5EOyTDQ.jpg' }}
             </ImageFilters>
           </Surface>
           {settings.map(filter => (
@@ -94,8 +103,7 @@ export default class App extends Component {
             rounded={false}
             style={styles.button}
             block
-            onPress={this.sameImage}
-          >
+            onPress={this.saveImage}>
             <Text>Save</Text>
           </Button>
         </Content>

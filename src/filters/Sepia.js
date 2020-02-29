@@ -1,12 +1,11 @@
-import GL from "gl-react";
+import { Shaders, Node, GLSL } from "gl-react";
 import React from "react";
-import PropTypes from "prop-types";
 
 import mixArrays from "../utils/mixArrays";
 
-const shaders = GL.Shaders.create({
-  Sepia: {
-    frag: `
+const shaders = Shaders.create({
+  sepia: {
+    frag: GLSL`
       precision highp float;
       varying vec2 uv;
       uniform sampler2D t;
@@ -19,8 +18,7 @@ const shaders = GL.Shaders.create({
   }
 });
 
-export default GL.createComponent(
-({ children: t, sepia: s }) => {
+export default function Sepia({ factor = 0, children: t }) {
   const sepia = mixArrays([
     1, 0, 0, 0,
     0, 1, 0, 0,
@@ -31,22 +29,15 @@ export default GL.createComponent(
     .6, .6, .6, 0,
     .1, .1, .1, 0,
     0.2, 0, -0.2, 1
-  ], s);
+  ], factor);
 
   return (
-    <GL.Node
-      shader={shaders.Sepia}
-      uniforms={{ t, sepia }}
+    <Node
+      shader={shaders.sepia}
+      uniforms={{
+        sepia,
+        t,
+      }}
     />
-  );
-},
-{
-  displayName: "Sepia",
-  defaultProps: {
-    sepia: 0,
-  },
-  propTypes: {
-    children: PropTypes.any.isRequired,
-    sepia: PropTypes.number,
-  }
-});
+  )
+}
