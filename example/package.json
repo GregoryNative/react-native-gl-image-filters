@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "postinstall": "cd .. && npm run compile"
   },
   "dependencies": {
     "buffer": "^5.4.3",
