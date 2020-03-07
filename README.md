@@ -36,6 +36,7 @@ Props for ImageFilters component
 ## Installation
 
 ```
+npm i --save react-native-gl-image-filters
 npm i --save gl-react@^4.0.1
 npm i --save gl-react-native@^4.0.1
 npm i --save buffer@^5.4.3
@@ -43,6 +44,7 @@ npm i --save react-native-unimodules@^0.7.0
 ```
 or
 ```
+yarn add react-native-gl-image-filters
 yarn add gl-react@^4.0.1
 yarn add gl-react-native@^4.0.1
 yarn add buffer@^5.4.3
@@ -59,6 +61,25 @@ https://github.com/unimodules/react-native-unimodules#-configure-ios
 
 https://github.com/unimodules/react-native-unimodules#-configure-android
 
+## Installation on Expo
+
+```
+npm i --save react-native-gl-image-filters
+npm i --save expo-gl
+npm i --save gl-react@^4.0.1
+npm i --save gl-react-expo@^4.0.1
+npm i --save buffer@^5.4.3
+```
+or
+```
+yarn add react-native-gl-image-filters
+yarn add expo-gl
+yarn add gl-react@^4.0.1
+yarn add gl-react-expo@^4.0.1
+yarn add buffer@^5.4.3
+```
+
+
 ### Usage
 ```javascript
 import React, { Component } from 'react';
@@ -68,8 +89,71 @@ import {
   View,
   Button
 } from 'react-native';
-import { Surface } from "gl-react-native";
-import ImageFilters from "react-native-gl-image-filters";
+import { Surface } from 'gl-react-native';
+import ImageFilters from 'react-native-gl-image-filters';
+
+export default class App extends Component {
+  save = async () => {
+    if (!this.image) return;
+
+    const result = await this.image.glView.capture();
+    console.warn(result);
+  };
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.welcome}>
+          Welcome to React Native Image Filters!
+        </Text>
+        <Surface
+          width={300}
+          height={300}
+          ref={ref => (this.image = ref)}
+        >
+          <ImageFilters
+            width={300}
+            height={300}
+            temperature={10000}
+            sharpen={1}
+            hue={0.5}
+            blur={0.5}
+          >
+            {{ uri: 'https://i.imgur.com/5EOyTDQ.jpg' }}
+          </ImageFilters>
+        </Surface>
+        <Button title="Save" onPress={this.save} />
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  }
+});
+```
+
+### Usage with Expo
+```javascript
+import React, { Component } from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button
+} from 'react-native';
+import { Surface } from 'gl-react-expo';
+import ImageFilters from 'react-native-gl-image-filters';
 
 export default class App extends Component {
   save = async () => {
