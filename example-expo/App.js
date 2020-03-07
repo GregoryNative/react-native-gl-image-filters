@@ -9,7 +9,7 @@ import {
   Text,
   Button,
 } from 'native-base';
-import { Surface } from 'gl-react-native';
+import { Surface } from 'gl-react-expo';
 import ImageFilters from 'react-native-gl-image-filters';
 
 import Filter from './Filter';
