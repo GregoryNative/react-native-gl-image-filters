@@ -1,0 +1,18 @@
+.App {
+  --width: 400px;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.App-header {
+  padding: 15px 0 15px 0;
+}
+.App-slider {
+  width: 200px;
+}
+.App-button {
+  width: var(--width);
+  margin-top: 15px !important;
+}

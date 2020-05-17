@@ -20,6 +20,7 @@
   "peerDependencies": {
     "buffer": "^5.4.3",
     "gl-react": "^4.0.1",
+    "gl-react-dom": "^4.0.1",
     "gl-react-native": "^4.0.1",
     "react-native-unimodules": "^0.7.0"
   },
