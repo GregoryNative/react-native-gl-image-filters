@@ -79,6 +79,20 @@ yarn add gl-react-expo@^4.0.1
 yarn add buffer@^5.4.3
 ```
 
+## Installation on React Web
+
+```
+npm i --save react-native-gl-image-filters
+npm i --save gl-react@^4.0.1
+npm i --save gl-react-dom@^4.0.1
+```
+or
+```
+yarn add react-native-gl-image-filters
+yarn add gl-react@^4.0.1
+yarn add gl-react-dom@^4.0.1
+```
+
 
 ### Usage
 ```javascript
@@ -205,3 +219,6 @@ const styles = StyleSheet.create({
   }
 });
 ```
+
+### Usage with React web
+Example here: [examples/web](https://github.com/GregoryNative/react-native-gl-image-filters/tree/master/examples/web)
