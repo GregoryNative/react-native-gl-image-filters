@@ -1,7 +1,7 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "preinstall": "cd .. && npm install && npm run compile",
+    "preinstall": "cd ../.. && npm install && npm run compile",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -18,7 +18,7 @@
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
-    "react-native-gl-image-filters": "file:../"
+    "react-native-gl-image-filters": "file:../../"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

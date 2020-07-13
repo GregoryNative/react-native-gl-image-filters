@@ -8,7 +8,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "postinstall": "cd .. && npm run compile"
+    "postinstall": "cd ../.. && npm run compile"
   },
   "dependencies": {
     "buffer": "^5.4.3",
@@ -17,7 +17,7 @@
     "native-base": "^2.13.8",
     "react": "16.9.0",
     "react-native": "0.61.5",
-    "react-native-gl-image-filters": "file:../",
+    "react-native-gl-image-filters": "file:../../",
     "react-native-unimodules": "^0.7.0"
   },
   "devDependencies": {

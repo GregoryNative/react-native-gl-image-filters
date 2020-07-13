@@ -8,7 +8,7 @@
     "gl-react-dom": "^4.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-native-gl-image-filters": "file:../",
+    "react-native-gl-image-filters": "file:../../",
     "react-native-web": "^0.12.2",
     "react-scripts": "3.4.1"
   },
