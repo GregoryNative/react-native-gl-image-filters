@@ -17,6 +17,9 @@
     "url": "https://github.com/GregoryNative/react-native-gl-image-filters/issues"
   },
   "homepage": "https://github.com/GregoryNative/react-native-gl-image-filters#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "peerDependencies": {
     "buffer": "^5.4.3",
     "gl-react": "^4.0.1",
