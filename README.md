@@ -16,13 +16,13 @@ OpenGL bindings for React Native to implement complex effects over images and co
 
 ## Documentation
 
-Props for ImageFilters component
+#### Props for ImageFilters component
 
 | Name | Description | Type | Required | Default Value |
 | :--- | :----- | :--- | :---: | :---: |
-| children | Inner component or url for image | Any |  |  |
-| width | Width of component | Number |   |  |
-| height | Height of component | Number |   |  |
+| children | Inner component or url for image | Any | + |  |
+| width | Width of component | Number | + |  |
+| height | Height of component | Number | + |  |
 | hue | Hue filter | Number |   | 0 |
 | blur | Blur filter | Number |   | 0 |
 | sepia | Sepia filter | Number |   | 0 |
@@ -32,6 +32,20 @@ Props for ImageFilters component
 | saturation | Saturation filter | Number |   | 1 |
 | brightness | Brightness filter | Number |   | 1 |
 | temperature | Temperature filter | Number |   | 6500 |
+
+#### Recommended Min and Max range for each filter
+
+| Name | Min. Value | Max. Value |
+| :--- | :---: | :---: |
+| hue | 0 | 6.3 |
+| blur | 0 | 30 |
+| sepia | -5 | 5 |
+| sharpen | 0 | 15 |
+| negative | -2 | 2 |
+| contrast | -10 | 10 |
+| saturation | 0 | 2 |
+| brightness | 0 | 5 |
+| temperature | 0 | 40000 |
 
 ## Installation
 
