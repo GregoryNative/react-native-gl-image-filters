@@ -1,4 +1,8 @@
+# Folders
 node_modules/
+.idea/
+.expo/
+
+# Files
 yarn-error.log
 .DS_Store
-.idea
