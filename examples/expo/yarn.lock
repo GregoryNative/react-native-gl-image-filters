@@ -4444,8 +4444,8 @@ react-native-easy-grid@0.2.2:
   dependencies:
     lodash "^4.17.15"
 
-"react-native-gl-image-filters@file:..":
-  version "0.1.0"
+"react-native-gl-image-filters@file:../..":
+  version "0.2.0"
 
 react-native-iphone-x-helper@^1.0.3:
   version "1.2.1"
