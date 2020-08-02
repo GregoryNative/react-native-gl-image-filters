@@ -19,40 +19,47 @@ const width = Dimensions.get('window').width - 40;
 const settings = [
   {
     name: 'hue',
-    minValue: -100.0,
-    maxValue: 100.0,
+    minValue: 0,
+    maxValue: 6.3,
   },
   {
     name: 'blur',
-    maxValue: 2.0,
+    minValue: 0,
+    maxValue: 30,
   },
   {
     name: 'sepia',
-    maxValue: 2.0,
+    minValue: -5,
+    maxValue: 5,
   },
   {
     name: 'sharpen',
-    maxValue: 2.0,
+    minValue: 0,
+    maxValue: 15,
   },
   {
     name: 'negative',
+    minValue: -2.0,
     maxValue: 2.0,
   },
   {
     name: 'contrast',
-    maxValue: 2.0,
+    minValue: -10.0,
+    maxValue: 10.0,
   },
   {
     name: 'saturation',
-    maxValue: 2.0,
+    minValue: 0.0,
+    maxValue: 2,
   },
   {
     name: 'brightness',
-    maxValue: 2.0,
+    minValue: 0,
+    maxValue: 5,
   },
   {
     name: 'temperature',
-    minValue: 1000.0,
+    minValue: 0.0,
     maxValue: 40000.0,
   },
 ];
