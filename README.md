@@ -2,7 +2,7 @@
   react-native-gl-image-filters
 </h1>
 
-<p alignn="center">
+<p align="center">
   <a href="https://github.com/GregoryNative/react-native-gl-image-filters/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="react-native-gl-image-filters is released under the MIT license." />
   </a>
