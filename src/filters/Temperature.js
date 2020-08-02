@@ -2,7 +2,7 @@ import { Shaders, Node, GLSL } from "gl-react";
 import React from "react";
 
 const shaders = Shaders.create({
-  temprature: {
+  temperature: {
     frag: GLSL`
       precision highp float;
       varying vec2 uv;
@@ -46,7 +46,7 @@ const shaders = Shaders.create({
 export default function Temperature({ factor = 6500, children: t }) {
   return (
     <Node
-      shader={shaders.temprature}
+      shader={shaders.temperature}
       uniforms={{
         temp: factor,
         t,
