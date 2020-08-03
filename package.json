@@ -3,6 +3,7 @@
   "version": "0.1.3",
   "description": "React-Native image filters using gl-react",
   "main": "lib/index.js",
+  "types": "index.d.ts",
   "scripts": {
     "compile": "rm -rf lib/ && babel --presets es2015,stage-1,react --source-maps -d lib src",
     "prepublish": "npm run compile"
