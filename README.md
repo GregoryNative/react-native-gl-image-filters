@@ -65,6 +65,10 @@ OpenGL bindings for React Native to implement complex effects over images and co
 | saturation | 0 | 2 |
 | brightness | 0 | 5 |
 | temperature | 0 | 40000 |
+<<<<<<< HEAD
+=======
+| 🆕 exposure | -1 | 1 |
+>>>>>>> 9b21c2c... add NEW to readme
 
 ## Installation
 
