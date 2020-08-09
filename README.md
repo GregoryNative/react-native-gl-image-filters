@@ -1,3 +1,20 @@
+<h1 align="center">
+  react-native-gl-image-filters
+</h1>
+
+<p align="center">
+  <a href="https://github.com/GregoryNative/react-native-gl-image-filters/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="react-native-gl-image-filters is released under the MIT license." />
+  </a>
+  <a href="https://www.npmjs.org/package/react-native-gl-image-filters">
+    <img src="https://badge.fury.io/js/react-native-gl-image-filters.svg" alt="Current npm package version." />
+  </a>
+  <a href="https://snack.expo.io/@gregoryrn/expo-gregorynative-react-native-gl-image-filters">
+    <img src="https://badgen.net/badge/expo/snack/blue?icon=https://symbols.getvecta.com/stencil_79/82_expo-icon.11a3983570.svg" alt="Expo snack." />
+  </a>
+</p>
+
+[](https://badgen.net/badge/expo/snack/blue?icon=https://symbols.getvecta.com/stencil_79/82_expo-icon.11a3983570.svg)
 OpenGL bindings for React Native to implement complex effects over images and components, in the descriptive VDOM paradigm. You can use predefined filters:
   - blur
   - contrast
@@ -17,13 +34,13 @@ OpenGL bindings for React Native to implement complex effects over images and co
 
 ## Documentation
 
-Props for ImageFilters component
+#### Props for ImageFilters component
 
 | Name | Description | Type | Required | Default Value |
 | :--- | :----- | :--- | :---: | :---: |
-| children | Inner component or url for image | Any |  |  |
-| width | Width of component | Number |   |  |
-| height | Height of component | Number |   |  |
+| children | Inner component or url for image | Any | + |  |
+| width | Width of component | Number | + |  |
+| height | Height of component | Number | + |  |
 | hue | Hue filter | Number |   | 0 |
 | blur | Blur filter | Number |   | 0 |
 | sepia | Sepia filter | Number |   | 0 |
@@ -34,6 +51,21 @@ Props for ImageFilters component
 | brightness | Brightness filter | Number |   | 1 |
 | temperature | Temperature filter | Number |   | 6500 |
 | 🆕 exposure | Exposure filter | Number |   | 0 |
+
+#### Recommended Min and Max range for each filter
+
+| Name | Min. Value | Max. Value |
+| :--- | :---: | :---: |
+| hue | 0 | 6.3 |
+| blur | 0 | 30 |
+| sepia | -5 | 5 |
+| sharpen | 0 | 15 |
+| negative | -2 | 2 |
+| contrast | -10 | 10 |
+| saturation | 0 | 2 |
+| brightness | 0 | 5 |
+| temperature | 0 | 40000 |
+| exposure | -1 | 1 |
 
 ## Installation
 
@@ -160,67 +192,8 @@ const styles = StyleSheet.create({
 ```
 
 ### Usage with Expo
-```javascript
-import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  Button
-} from 'react-native';
-import { Surface } from 'gl-react-expo';
-import ImageFilters from 'react-native-gl-image-filters';
-
-export default class App extends Component {
-  save = async () => {
-    if (!this.image) return;
-
-    const result = await this.image.glView.capture();
-    console.warn(result);
-  };
-
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native Image Filters!
-        </Text>
-        <Surface
-          width={300}
-          height={300}
-          ref={ref => (this.image = ref)}
-        >
-          <ImageFilters
-            width={300}
-            height={300}
-            temperature={10000}
-            sharpen={1}
-            hue={0.5}
-            blur={0.5}
-          >
-            {{ uri: 'https://i.imgur.com/5EOyTDQ.jpg' }}
-          </ImageFilters>
-        </Surface>
-        <Button title="Save" onPress={this.save} />
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  }
-});
-```
+Snack: https://snack.expo.io/@gregoryrn/expo-gregorynative-react-native-gl-image-filters <br>
+Example here: [examples/expo](https://github.com/GregoryNative/react-native-gl-image-filters/tree/master/examples/expo)
 
 ### Usage with React web
 Example here: [examples/web](https://github.com/GregoryNative/react-native-gl-image-filters/tree/master/examples/web)

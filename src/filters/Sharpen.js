@@ -29,7 +29,7 @@ const shaders = Shaders.create({
   }
 });
 
-export default function Temperature({ factor = 0, width, height, children: t }) {
+export default function Sharpen({ factor = 0, width, height, children: t }) {
   return (
     <Node
       shader={shaders.sharpen}
