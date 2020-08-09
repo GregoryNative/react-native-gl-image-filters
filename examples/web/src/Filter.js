@@ -1,7 +1,7 @@
 import React from 'react';
 import { Slider } from '@material-ui/core';
 
-export default ({name, defaultValue, minimum = 0, maximum, onChange}) => (
+export default ({name, defaultValue, minimum = 0, maximum, step = 1, onChange}) => (
   <div className="App-filter">
     <p className="App-filter-name">{name}</p>
     <Slider
@@ -10,6 +10,7 @@ export default ({name, defaultValue, minimum = 0, maximum, onChange}) => (
       defaultValue={defaultValue}
       min={minimum}
       max={maximum}
+      step={step}
       onChangeCommitted={(_, value) => onChange(value)}
     />
     <style jsx>{`

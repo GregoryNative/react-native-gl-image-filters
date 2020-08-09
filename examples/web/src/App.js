@@ -49,6 +49,12 @@ const settings = [
     minValue: 1000.0,
     maxValue: 40000.0,
   },
+  {
+    name: 'exposure',
+    step: 0.05,
+    minValue: -1.0,
+    maxValue: 1.0,
+  },
 ];
 
 export default class App extends Component {
@@ -66,6 +72,7 @@ export default class App extends Component {
       saturation: 1,
       brightness: 1,
       temperature: 6500,
+      exposure: 0,
     };
   };
 
@@ -108,6 +115,7 @@ export default class App extends Component {
             defaultValue={this.state[filter.name]}
             minimum={filter.minValue}
             maximum={filter.maxValue}
+            step={filter.step}
             onChange={value => this.setState({[filter.name]: value})}
           />
         ))}
