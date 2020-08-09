@@ -5,4 +5,11 @@ node_modules/
 
 # Files
 yarn-error.log
+<<<<<<< HEAD
 .DS_Store
+=======
+.DS_Store
+.idea
+yarn.lock
+package-lock.json
+>>>>>>> 4269836... add exposure filter 🎉

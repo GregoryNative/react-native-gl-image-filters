@@ -20,7 +20,7 @@ const shaders = Shaders.create({
         vec3 texD = texture2D( t, uv + vec2( step.x,  step.y) * 1.5 ).rgb;
         
         vec3 around = 0.25 * (texA + texB + texC + texD);
-        vec3 center  = texture2D( t, uv ).rgb;
+        vec3 center = texture2D( t, uv ).rgb;
         vec3 col = center + (center - around) * factor;
 
         gl_FragColor = vec4(col, 1.0);
