@@ -1,8 +1,8 @@
 {
   "name": "react-native-gl-image-filters",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "React-Native image filters using gl-react",
-  "main": "libyarn/index.js",
+  "main": "lib/index.js",
   "types": "index.d.ts",
   "scripts": {
     "compile": "rm -rf lib/ && babel --presets es2015,stage-1,react,minify --source-maps -d lib src",
