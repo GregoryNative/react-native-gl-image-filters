@@ -7,7 +7,8 @@ OpenGL bindings for React Native to implement complex effects over images and co
   - negative
   - sepia
   - sharpen
-  - tempreture.
+  - temperature
+  - 🆕 exposure. 
 
 ![](https://github.com/GregoryNative/react-native-gl-image-filters/blob/master/cat-gl-filters.gif)
 
@@ -32,6 +33,7 @@ Props for ImageFilters component
 | saturation | Saturation filter | Number |   | 1 |
 | brightness | Brightness filter | Number |   | 1 |
 | temperature | Temperature filter | Number |   | 6500 |
+| 🆕 exposure | Exposure filter | Number |   | 0 |
 
 ## Installation
 

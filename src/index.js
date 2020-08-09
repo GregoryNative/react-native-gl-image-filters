@@ -7,6 +7,7 @@ import Sharpen from "./filters/Sharpen";
 import Negative from "./filters/Negative";
 import Temperature from "./filters/Temperature";
 import ContrastSaturationBrightness from "./filters/ContrastSaturationBrightness";
+import Exposure from "./filters/Exposure";
 
 export default ({
   children,
@@ -20,26 +21,29 @@ export default ({
   contrast,
   saturation,
   brightness,
-  temperature
+  temperature,
+  exposure
 }) => {
   return (
     <Sepia factor={sepia}>
       <Hue factor={hue}>
-        <Negative factor={negative}>
-          <Temperature factor={temperature}>
-            <ContrastSaturationBrightness
-              contrast={contrast}
-              saturation={saturation}
-              brightness={brightness}
-            >
-              <Blur factor={blur} passes={4} height={height} width={width}>
-                <Sharpen factor={sharpen} height={height} width={width}>
-                  {children}
-                </Sharpen>
-              </Blur>
-            </ContrastSaturationBrightness>
-          </Temperature>
-        </Negative>
+        <Exposure exposure={exposure}>
+          <Negative factor={negative}>
+            <Temperature factor={temperature}>
+              <ContrastSaturationBrightness
+                contrast={contrast}
+                saturation={saturation}
+                brightness={brightness}
+              >
+                <Blur factor={blur} passes={4} height={height} width={width}>
+                  <Sharpen factor={sharpen} height={height} width={width}>
+                    {children}
+                  </Sharpen>
+                </Blur>
+              </ContrastSaturationBrightness>
+            </Temperature>
+          </Negative>
+        </Exposure>
       </Hue>
     </Sepia>
   );

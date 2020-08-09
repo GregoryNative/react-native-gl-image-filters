@@ -36,7 +36,11 @@ export type FiltersProps = {
   /**
    * Value of temperature
    */
-  temperature?: number
+  temperature?: number,
+  /**
+   * Value of exposure
+   */
+  exposure?: number
 }
 
 export type ImageFiltersProps = FiltersProps & {
