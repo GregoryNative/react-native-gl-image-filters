@@ -139,5 +139,5 @@ Snack: https://snack.expo.io/@gregoryrn/expo-gregorynative-react-native-gl-image
 Example here: [examples/expo](https://github.com/GregoryNative/react-native-gl-image-filters/tree/master/examples/expo)
 
 ### Usage with React web
-Blitz: https://stackblitz.com/edit/react-native-gl-image-filters-web-example
+Blitz: https://stackblitz.com/edit/react-native-gl-image-filters-web-example <br>
 Example here: [examples/web](https://github.com/GregoryNative/react-native-gl-image-filters/tree/master/examples/web)
