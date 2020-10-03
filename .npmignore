@@ -2,3 +2,9 @@ examples/
 src/
 cat-gl-filters.gif
 .idea/
+
+docs/
+website/
+Dockerfile
+docker-compose.yml
+.dockerignore

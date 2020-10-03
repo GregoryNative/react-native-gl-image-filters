@@ -1,4 +1,5 @@
 <h1 align="center">
+  <img width="32" alt="icon" src="https://github.com/GregoryNative/react-native-gl-image-filters/tree/master/website/static/img/favicon_32.ico">
   react-native-gl-image-filters
 </h1>
 
@@ -18,7 +19,7 @@
 </p>
 
 [](https://badgen.net/badge/expo/snack/blue?icon=https://symbols.getvecta.com/stencil_79/82_expo-icon.11a3983570.svg)
-OpenGL bindings for React Native to implement complex effects over images and components, in the descriptive VDOM paradigm. You can use predefined filters:
+OpenGL bindings for React/React Native to implement complex effects over images, in the descriptive VDOM paradigm. You can use predefined filters:
   - blur
   - contrast
   - saturation
