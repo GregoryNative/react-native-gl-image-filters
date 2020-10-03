@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img width="32" alt="icon" src="https://github.com/GregoryNative/react-native-gl-image-filters/tree/docusaurus/website/static/img/favicon_32.ico">
+  <img width="32" alt="icon" src="https://raw.githubusercontent.com/GregoryNative/react-native-gl-image-filters/docusaurus/website/static/img/favicon_32.ico">
   react-native-gl-image-filters
 </h1>
 
