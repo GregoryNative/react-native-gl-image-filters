@@ -18,7 +18,9 @@ const shaders = Shaders.create({
   }
 });
 
-export default function Negative({ factor = 0, children: t }) {
+export const DefaultValue = 0;
+
+export default function Negative({ factor = DefaultValue, children: t }) {
   return (
     <Node
       shader={shaders.negative}
