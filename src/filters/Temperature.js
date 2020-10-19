@@ -43,7 +43,9 @@ const shaders = Shaders.create({
   }
 });
 
-export default function Temperature({ factor = 6500, children: t }) {
+export const DefaultValue = 6500;
+
+export default function Temperature({ factor = DefaultValue, children: t }) {
   return (
     <Node
       shader={shaders.temperature}

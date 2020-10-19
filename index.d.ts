@@ -59,3 +59,7 @@ export type ImageFiltersProps = FiltersProps & {
 }
 
 export default function ImageFilters(props: ImageFiltersProps): React.ReactElement<{}>;
+
+export type Constants = {
+  DefaultValues: FiltersProps;
+}

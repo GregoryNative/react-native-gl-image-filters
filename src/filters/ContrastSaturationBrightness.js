@@ -30,10 +30,16 @@ const shaders = Shaders.create({
   }
 });
 
-export default function ContrastSaturationBrightness({ 
-  brightness = 1,
-  contrast = 1,
-  saturation = 1,
+export const DefaultValue = Object.freeze({
+  brightness: 1,
+  contrast: 1,
+  saturation: 1,
+});
+
+export default function ContrastSaturationBrightness({
+  brightness = DefaultValue.brightness,
+  contrast = DefaultValue.contrast,
+  saturation = DefaultValue.saturation,
   children: t
 }) {
   return (

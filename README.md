@@ -1,4 +1,5 @@
 <h1 align="center">
+  <img width="32" alt="icon" src="https://raw.githubusercontent.com/GregoryNative/react-native-gl-image-filters/docusaurus/website/static/img/favicon_32.ico">
   react-native-gl-image-filters
 </h1>
 
@@ -8,6 +9,9 @@
   </a>
   <a href="https://www.npmjs.org/package/react-native-gl-image-filters">
     <img src="https://badge.fury.io/js/react-native-gl-image-filters.svg" alt="Current npm package version." />
+  </a>
+  <a href="https://www.npmjs.com/package/react-native-gl-image-filters">
+    <img src="https://img.shields.io/npm/dm/react-native-gl-image-filters.svg" alt="Current npm package downloads." />
   </a>
   <a href="https://snack.expo.io/@gregoryrn/expo-gregorynative-react-native-gl-image-filters">
     <img src="https://badgen.net/badge/expo/snack/blue?icon=https://symbols.getvecta.com/stencil_79/82_expo-icon.11a3983570.svg" alt="Expo snack." />
@@ -25,7 +29,7 @@ OpenGL bindings for React Native to implement complex effects over images and co
   - sepia
   - sharpen
   - temperature
-  - 🆕 exposure. 
+  - exposure. 
 
 ![](https://github.com/GregoryNative/react-native-gl-image-filters/blob/master/cat-gl-filters.gif)
 
@@ -50,7 +54,33 @@ OpenGL bindings for React Native to implement complex effects over images and co
 | saturation | Saturation filter | Number |   | 1 |
 | brightness | Brightness filter | Number |   | 1 |
 | temperature | Temperature filter | Number |   | 6500 |
-| 🆕 exposure | Exposure filter | Number |   | 0 |
+| exposure | Exposure filter | Number |   | 0 |
+
+#### API
+- [Constants](https://github.com/GregoryNative/react-native-gl-image-filters#constants)
+
+#### `Constants`
+- [DefaultValues](https://github.com/GregoryNative/react-native-gl-image-filters#constants)
+
+#### `DefaultValues`
+
+Can be used to reset filter value to default one. 
+
+```js
+import ImageFilters from 'react-native-gl-image-filters';
+
+ImageFilters.Constants.DefaultValues;
+ImageFilters.Constants.DefaultValues.blur;
+ImageFilters.Constants.DefaultValues.hue;
+ImageFilters.Constants.DefaultValues.sepia;
+ImageFilters.Constants.DefaultValues.sharpen;
+ImageFilters.Constants.DefaultValues.negative;
+ImageFilters.Constants.DefaultValues.contrast;
+ImageFilters.Constants.DefaultValues.saturation;
+ImageFilters.Constants.DefaultValues.brightness;
+ImageFilters.Constants.DefaultValues.temperature;
+ImageFilters.Constants.DefaultValues.exposure;
+```
 
 #### Recommended Min and Max range for each filter
 
@@ -65,7 +95,7 @@ OpenGL bindings for React Native to implement complex effects over images and co
 | saturation | 0 | 2 |
 | brightness | 0 | 5 |
 | temperature | 0 | 40000 |
-| 🆕 exposure | -1 | 1 |
+| exposure | -1 | 1 |
 
 ## Installation
 

@@ -1,6 +1,6 @@
 {
   "name": "react-native-gl-image-filters",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "React-Native image filters using gl-react",
   "main": "lib/index.js",
   "types": "index.d.ts",
