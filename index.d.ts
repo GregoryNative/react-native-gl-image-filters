@@ -55,7 +55,7 @@ export type ImageFiltersProps = FiltersProps & {
   /**
    * Content of the overlay
    */
-  children: React.ReactElement<any>;
+  children: React.ReactElement<any> | {uri: string};
 }
 
 export default function ImageFilters(props: ImageFiltersProps): React.ReactElement<{}>;
