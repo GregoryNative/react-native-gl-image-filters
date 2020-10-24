@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/presets/SlumberPreset.js"],"names":["brightness","saturation"],"mappings":"oEAAA,uC,gBAEe,yBAAa,CAC1BA,WAAY,EADc,CAE1BC,WAAY,CAAC,EAFa,CAAb,C","file":"SlumberPreset.js","sourcesContent":["import { createPreset } from '../utils/preset';\n\nexport default createPreset({\n  brightness: .1,\n  saturation: -.5,\n});\n"]}
