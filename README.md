@@ -58,28 +58,88 @@ OpenGL bindings for React Native to implement complex effects over images and co
 
 #### API
 - [Constants](https://github.com/GregoryNative/react-native-gl-image-filters#constants)
+- [Presets](https://github.com/GregoryNative/react-native-gl-image-filters#presets)
+- [Utils](https://github.com/GregoryNative/react-native-gl-image-filters#utils)
 
 #### `Constants`
 - [DefaultValues](https://github.com/GregoryNative/react-native-gl-image-filters#constants)
+- [Presets](https://github.com/GregoryNative/react-native-gl-image-filters#presets)
 
-#### `DefaultValues`
+##### `DefaultValues`
 
 Can be used to reset filter value to default one. 
 
 ```js
-import ImageFilters from 'react-native-gl-image-filters';
+import { Constants } from 'react-native-gl-image-filters';
 
-ImageFilters.Constants.DefaultValues;
-ImageFilters.Constants.DefaultValues.blur;
-ImageFilters.Constants.DefaultValues.hue;
-ImageFilters.Constants.DefaultValues.sepia;
-ImageFilters.Constants.DefaultValues.sharpen;
-ImageFilters.Constants.DefaultValues.negative;
-ImageFilters.Constants.DefaultValues.contrast;
-ImageFilters.Constants.DefaultValues.saturation;
-ImageFilters.Constants.DefaultValues.brightness;
-ImageFilters.Constants.DefaultValues.temperature;
-ImageFilters.Constants.DefaultValues.exposure;
+Constants.DefaultValues.blur;
+Constants.DefaultValues.hue;
+Constants.DefaultValues.sepia;
+Constants.DefaultValues.sharpen;
+Constants.DefaultValues.negative;
+Constants.DefaultValues.contrast;
+Constants.DefaultValues.saturation;
+Constants.DefaultValues.brightness;
+Constants.DefaultValues.temperature;
+Constants.DefaultValues.exposure;
+```
+
+##### `Presets`
+
+```js
+import { Constants } from 'react-native-gl-image-filters';
+
+Constants.Presets.NoPreset;
+Constants.Presets.AmaroPreset;
+Constants.Presets.ClarendonPreset;
+Constants.Presets.DogpatchPreset;
+Constants.Presets.GinghamPreset;
+Constants.Presets.GinzaPreset;
+Constants.Presets.HefePreset;
+Constants.Presets.LudwigPreset;
+Constants.Presets.SkylinePreset;
+Constants.Presets.SlumberPreset;
+Constants.Presets.SierraPreset;
+Constants.Presets.StinsonPreset;
+```
+
+##### Presets
+
+```js
+import { Presets } from 'react-native-gl-image-filters';
+
+Presets.NoPreset;
+Presets.AmaroPreset;
+Presets.ClarendonPreset;
+Presets.DogpatchPreset;
+Presets.GinghamPreset;
+Presets.GinzaPreset;
+Presets.HefePreset;
+Presets.LudwigPreset;
+Presets.SkylinePreset;
+Presets.SlumberPreset;
+Presets.SierraPreset;
+Presets.StinsonPreset;
+```
+
+#### `Utils`
+
+##### createPreset
+
+```js
+import ImageFilters, { Utils } from 'react-native-gl-image-filters';
+
+const MyOwnPreset = Utils.createPreset({
+  brightness: .1,
+  saturation: -.5,
+  sepia: .15,
+});
+
+...
+
+<ImageFilters {...MyOwnPreset}>
+  {{ uri: 'https://i.imgur.com/5EOyTDQ.jpg' }}
+</ImageFilters>
 ```
 
 #### Recommended Min and Max range for each filter
