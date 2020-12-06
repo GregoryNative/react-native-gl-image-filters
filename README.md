@@ -58,12 +58,12 @@ OpenGL bindings for React Native to implement complex effects over images and co
 
 #### API
 - [Constants](https://github.com/GregoryNative/react-native-gl-image-filters#constants)
-- [Presets](https://github.com/GregoryNative/react-native-gl-image-filters#presets)
-- [Utils](https://github.com/GregoryNative/react-native-gl-image-filters#utils)
+- 🆕 [Presets](https://github.com/GregoryNative/react-native-gl-image-filters#presets)
+- 🆕 [Utils](https://github.com/GregoryNative/react-native-gl-image-filters#utils)
 
 #### `Constants`
 - [DefaultValues](https://github.com/GregoryNative/react-native-gl-image-filters#constants)
-- [Presets](https://github.com/GregoryNative/react-native-gl-image-filters#presets)
+- 🆕 [DefaultPresets](https://github.com/GregoryNative/react-native-gl-image-filters#defaultpresets)
 
 ##### `DefaultValues`
 
@@ -84,23 +84,23 @@ Constants.DefaultValues.temperature;
 Constants.DefaultValues.exposure;
 ```
 
-##### `Presets`
+##### `DefaultPresets`
 
 ```js
 import { Constants } from 'react-native-gl-image-filters';
 
-Constants.Presets.NoPreset;
-Constants.Presets.AmaroPreset;
-Constants.Presets.ClarendonPreset;
-Constants.Presets.DogpatchPreset;
-Constants.Presets.GinghamPreset;
-Constants.Presets.GinzaPreset;
-Constants.Presets.HefePreset;
-Constants.Presets.LudwigPreset;
-Constants.Presets.SkylinePreset;
-Constants.Presets.SlumberPreset;
-Constants.Presets.SierraPreset;
-Constants.Presets.StinsonPreset;
+Constants.DefaultPresets.NoPreset;
+Constants.DefaultPresets.AmaroPreset;
+Constants.DefaultPresets.ClarendonPreset;
+Constants.DefaultPresets.DogpatchPreset;
+Constants.DefaultPresets.GinghamPreset;
+Constants.DefaultPresets.GinzaPreset;
+Constants.DefaultPresets.HefePreset;
+Constants.DefaultPresets.LudwigPreset;
+Constants.DefaultPresets.SkylinePreset;
+Constants.DefaultPresets.SlumberPreset;
+Constants.DefaultPresets.SierraPreset;
+Constants.DefaultPresets.StinsonPreset;
 ```
 
 ##### Presets
@@ -120,6 +120,12 @@ Presets.SkylinePreset;
 Presets.SlumberPreset;
 Presets.SierraPreset;
 Presets.StinsonPreset;
+
+...
+
+<ImageFilters {...Presets.StinsonPreset}>
+  {{ uri: 'https://i.imgur.com/5EOyTDQ.jpg' }}
+</ImageFilters>
 ```
 
 #### `Utils`
@@ -155,14 +161,7 @@ const MyOwnPreset = Utils.createPreset({
 | saturation | 0 | 2 |
 | brightness | 0 | 5 |
 | temperature | 0 | 40000 |
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-| 🆕 exposure | -1 | 1 |
->>>>>>> 9b21c2c... add NEW to readme
-=======
 | exposure | -1 | 1 |
->>>>>>> 0b5e210... add Constants.DefaultValues to API
 
 ## Installation
 

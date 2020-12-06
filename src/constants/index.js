@@ -1,9 +1,9 @@
 import DefaultValues from "./DefaultValues";
-import Presets from "./Presets";
+import DefaultPresets from "./Presets";
 
 const Constants = Object.freeze({
   DefaultValues,
-  Presets,
+  DefaultPresets,
 });
 
 export default Constants;

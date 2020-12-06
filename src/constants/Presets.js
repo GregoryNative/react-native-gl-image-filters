@@ -14,7 +14,7 @@ function Preset(name, description, preset) {
   return { name, description, preset };
 }
 
-const Presets = [
+const DefaultPresets = [
   Preset('Amaro', 'Adds light to an image, with the focus on the centre', AmaroPreset),
   Preset('Clarendon', 'Adds light to lighter areas and dark to darker areas', ClarendonPreset),
   Preset('Dogpatch', 'Increases the contrast, while washing out the lighter colors', DogpatchPreset),
@@ -28,4 +28,4 @@ const Presets = [
   Preset('Stinson', 'Washing out the colors ever so slightly', StinsonPreset),
 ];
 
-export default Presets;
+export default DefaultPresets;
