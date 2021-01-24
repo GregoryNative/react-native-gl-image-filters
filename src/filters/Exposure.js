@@ -54,7 +54,9 @@ const shaders = Shaders.create({
   }
 });
 
-export default function Exposure({ exposure = 0, children: t }) {
+export const DefaultValue = 0;
+
+export default function Exposure({ exposure = DefaultValue, children: t }) {
   return (
     <Node
       shader={shaders.exposure}

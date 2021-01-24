@@ -83,6 +83,12 @@ export default class App extends Component {
     console.warn(result);
   };
 
+  resetImage = () => {
+    this.setState({
+      ...ImageFilters.Constants.DefaultValues,
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -112,6 +118,7 @@ export default class App extends Component {
           <Filter
             key={filter.name}
             name={filter.name}
+            value={this.state[filter.name]}
             defaultValue={this.state[filter.name]}
             minimum={filter.minValue}
             maximum={filter.maxValue}
@@ -126,6 +133,14 @@ export default class App extends Component {
           onClick={this.saveImage}
         >
           Save
+        </Button>
+        <Button
+          className="App-button"
+          variant="contained"
+          color="primary"
+          onClick={this.resetImage}
+        >
+          Reset
         </Button>
       </div>
     );

@@ -6,4 +6,8 @@ node_modules/
 # Files
 yarn-error.log
 .DS_Store
+.idea
+yarn.lock
 package-lock.json
+favicon.psd
+gh-md-toc

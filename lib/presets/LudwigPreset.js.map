@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/presets/LudwigPreset.js"],"names":["brightness","saturation"],"mappings":"oEAAA,uC,gBAEe,yBAAa,CAC1BA,WAAY,GADc,CAE1BC,WAAY,CAAC,GAFa,CAAb,C","file":"LudwigPreset.js","sourcesContent":["import { createPreset } from '../utils/preset';\n\nexport default createPreset({\n  brightness: .05,\n  saturation: -.03,\n});\n"]}

@@ -26,7 +26,9 @@ const shaders = Shaders.create({
   }
 });
 
-export default function Hue({ factor = 0, children: t }) {
+export const DefaultValue = 0;
+
+export default function Hue({ factor = DefaultValue, children: t }) {
   return (
     <Node
       shader={shaders.hue}
