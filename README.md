@@ -1,5 +1,6 @@
 <h1 align="center">
   <img width="32" alt="icon" src="https://raw.githubusercontent.com/GregoryNative/react-native-gl-image-filters/docusaurus/website/static/img/favicon_32.ico">
+  react-native-gl-image-filters
 </h1>
 
 <p align="center">
@@ -14,6 +15,9 @@
   </a>
   <a href="https://snack.expo.io/@gregoryrn/expo-gregorynative-react-native-gl-image-filters">
     <img src="https://badgen.net/badge/expo/snack/blue?icon=https://symbols.getvecta.com/stencil_79/82_expo-icon.11a3983570.svg" alt="Expo snack." />
+  </a>
+  <a href="https://stackblitz.com/edit/react-native-gl-image-filters-web-example">
+    <img src="https://badgen.net/badge/web/blitz/purple?icon=bitcoin-lightning" alt="Expo snack." />
   </a>
 </p>
 
@@ -305,71 +309,12 @@ yarn add gl-react-dom@^4.0.1
 ## Usage
 
 ### Usage with React Native
-```javascript
-import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  Button
-} from 'react-native';
-import { Surface } from 'gl-react-native';
-import ImageFilters from 'react-native-gl-image-filters';
-
-export default class App extends Component {
-  save = async () => {
-    if (!this.image) return;
-
-    const result = await this.image.glView.capture();
-    console.warn(result);
-  };
-
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native Image Filters!
-        </Text>
-        <Surface
-          width={300}
-          height={300}
-          ref={ref => (this.image = ref)}
-        >
-          <ImageFilters
-            width={300}
-            height={300}
-            temperature={10000}
-            sharpen={1}
-            hue={0.5}
-            blur={0.5}
-          >
-            {{ uri: 'https://i.imgur.com/5EOyTDQ.jpg' }}
-          </ImageFilters>
-        </Surface>
-        <Button title="Save" onPress={this.save} />
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  }
-});
-```
+Example here: [examples/react-native](https://github.com/GregoryNative/react-native-gl-image-filters/tree/master/examples/react-native)
 
 ### Usage with Expo
 Snack: https://snack.expo.io/@gregoryrn/expo-gregorynative-react-native-gl-image-filters <br>
 Example here: [examples/expo](https://github.com/GregoryNative/react-native-gl-image-filters/tree/master/examples/expo)
 
 ### Usage with React web
+Blitz: https://stackblitz.com/edit/react-native-gl-image-filters-web-example <br>
 Example here: [examples/web](https://github.com/GregoryNative/react-native-gl-image-filters/tree/master/examples/web)
