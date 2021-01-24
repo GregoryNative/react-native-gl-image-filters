@@ -56,7 +56,7 @@ export type IImageFiltersProps = IFiltersProps & {
   /**
    * Content of the overlay
    */
-  children: React.ReactElement<any>;
+  children: React.ReactElement<any> | { uri: string };
 }
 
 export default function ImageFilters(props: IImageFiltersProps): React.ReactElement<{}>;
@@ -90,3 +90,5 @@ export interface Presets {
 export interface Utils {
   createPreset: (properties: IFiltersProps) => IFiltersProps;
 }
+
+export default function ImageFilters(props: ImageFiltersProps): React.ReactElement<{}>;
