@@ -35,10 +35,39 @@ OpenGL bindings for React Native to implement complex effects over images and co
 
 **`gl-react-native` is an implementation of `gl-react` for `react-native`. Please [read the main gl-react README](https://github.com/gre/gl-react) and [gl-react-native README](https://github.com/gre/gl-react/tree/master/packages/gl-react-native) for more information.**
 
+Table of Contents
+=================
+<!--ts-->
+  * [API](#api)
+     * [Props](#props)
+     * [Constants](#constants)
+        * [DefaultValues](#defaultvalues)
+           * [Usage example](#usage-example)
+        * [DefaultPresets](#defaultpresets)
+           * [Usage example](#usage-example-1)
+     * [Presets](#presets)
+     * [Utils](#utils)
+        * [createPreset](#createpreset)
+  * [Recommended Min and Max range for each filter](#recommended-min-and-max-range-for-each-filter)
+  * [Installation](#installation)
+     * [Installation for React Native](#installation-for-react-native)
+        * [Configure your React Native Application](#configure-your-react-native-application)
+     * [Installation on Expo](#installation-on-expo)
+     * [Installation on React Web](#installation-on-react-web)
+  * [Usage](#usage)
+     * [Usage with React Native](#usage-with-react-native)
+     * [Usage with Expo](#usage-with-expo)
+     * [Usage with React web](#usage-with-react-web)
+<!--te-->
 
-## Documentation
+## API
+- [`Props`](#props)
+- 🆕 [`Constants`](#constants)
+- 🆕 [`Presets`](#presets)
+- 🆕 [`Utils`](#utils)
 
-#### Props for ImageFilters component
+### `Props`
+Props for ImageFilters Component
 
 | Name | Description | Type | Required | Default Value |
 | :--- | :----- | :--- | :---: | :---: |
@@ -56,54 +85,102 @@ OpenGL bindings for React Native to implement complex effects over images and co
 | temperature | Temperature filter | Number |   | 6500 |
 | exposure | Exposure filter | Number |   | 0 |
 
-#### API
-- [Constants](https://github.com/GregoryNative/react-native-gl-image-filters#constants)
-- 🆕 [Presets](https://github.com/GregoryNative/react-native-gl-image-filters#presets)
-- 🆕 [Utils](https://github.com/GregoryNative/react-native-gl-image-filters#utils)
+### `Constants`
+- 🆕 [`DefaultValues`](#defaultvalues)
+- 🆕 [`DefaultPresets`](#defaultpresets)
 
-#### `Constants`
-- [DefaultValues](https://github.com/GregoryNative/react-native-gl-image-filters#constants)
-- 🆕 [DefaultPresets](https://github.com/GregoryNative/react-native-gl-image-filters#defaultpresets)
+#### `DefaultValues`
+Can be used to set filter to default one manually. 
 
-##### `DefaultValues`
-
-Can be used to reset filter value to default one. 
-
-```js
-import { Constants } from 'react-native-gl-image-filters';
-
-Constants.DefaultValues.blur;
-Constants.DefaultValues.hue;
-Constants.DefaultValues.sepia;
-Constants.DefaultValues.sharpen;
-Constants.DefaultValues.negative;
-Constants.DefaultValues.contrast;
-Constants.DefaultValues.saturation;
-Constants.DefaultValues.brightness;
-Constants.DefaultValues.temperature;
-Constants.DefaultValues.exposure;
+```ts
+interface DefaultValues {
+  sepia: number;
+  hue: number;
+  blur: number;
+  sharpen: number;
+  negative: number;
+  temperature: number;
+  brightness: number;
+  contrast: number;
+  saturation: number;
+  exposure: number;
+}
 ```
 
-##### `DefaultPresets`
+##### Usage example
 
 ```js
-import { Constants } from 'react-native-gl-image-filters';
+import ImageFilters, { Constants } from 'react-native-gl-image-filters';
 
-Constants.DefaultPresets.NoPreset;
-Constants.DefaultPresets.AmaroPreset;
-Constants.DefaultPresets.ClarendonPreset;
-Constants.DefaultPresets.DogpatchPreset;
-Constants.DefaultPresets.GinghamPreset;
-Constants.DefaultPresets.GinzaPreset;
-Constants.DefaultPresets.HefePreset;
-Constants.DefaultPresets.LudwigPreset;
-Constants.DefaultPresets.SkylinePreset;
-Constants.DefaultPresets.SlumberPreset;
-Constants.DefaultPresets.SierraPreset;
-Constants.DefaultPresets.StinsonPreset;
+...
+
+state = {
+  blur: 4,
+};
+
+...
+
+resetFilter = () => {
+  this.setState({
+    blur: Constants.DefaultValues.blur,
+  });
+}
 ```
 
-##### Presets
+#### `DefaultPresets`
+Can be used to list available presets. 
+
+```ts
+interface DefaultPresets extends Array<DefaultPreset> {}
+```
+
+```ts
+interface DefaultPreset {
+  name: string,
+  description: string,
+  preset: Preset,
+}
+```
+
+```ts
+interface Preset {
+  sepia?: number;
+  hue?: number;
+  blur?: number;
+  sharpen?: number;
+  negative?: number;
+  temperature?: number;
+  brightness?: number;
+  contrast?: number;
+  saturation?: number;
+  exposure?: number;
+}
+```
+
+##### Usage example
+
+```js
+import ImageFilters, { Constants } from 'react-native-gl-image-filters';
+
+...
+
+<>
+  {Constants.DefaultPresets.map(item =>
+    <View>
+      <Text>{item.name}</Text>
+      <Text>{item.description}</Text>
+      <Surface>
+        <ImageFilters {...item.preset}>
+          {{ uri: 'https://i.imgur.com/5EOyTDQ.jpg' }}
+        </ImageFilters>
+       </Surface>
+    </View>
+  )}
+</>
+```
+
+### `Presets`
+Use predefined presets.
 
 ```js
 import { Presets } from 'react-native-gl-image-filters';
@@ -128,9 +205,10 @@ Presets.StinsonPreset;
 </ImageFilters>
 ```
 
-#### `Utils`
+### `Utils`
 
-##### createPreset
+#### createPreset
+Available for creating own presets.
 
 ```js
 import ImageFilters, { Utils } from 'react-native-gl-image-filters';
@@ -148,7 +226,7 @@ const MyOwnPreset = Utils.createPreset({
 </ImageFilters>
 ```
 
-#### Recommended Min and Max range for each filter
+## Recommended Min and Max range for each filter
 
 | Name | Min. Value | Max. Value |
 | :--- | :---: | :---: |
@@ -164,6 +242,8 @@ const MyOwnPreset = Utils.createPreset({
 | exposure | -1 | 1 |
 
 ## Installation
+
+### Installation for React Native
 
 ```
 npm i --save react-native-gl-image-filters
@@ -181,7 +261,7 @@ yarn add buffer@^5.4.3
 yarn add react-native-unimodules@^0.7.0
 ```
 
-### Configure your React Native Application
+#### Configure your React Native Application
 
 **on iOS:**
 
@@ -191,7 +271,7 @@ https://github.com/unimodules/react-native-unimodules#-configure-ios
 
 https://github.com/unimodules/react-native-unimodules#-configure-android
 
-## Installation on Expo
+### Installation on Expo
 
 ```
 npm i --save react-native-gl-image-filters
@@ -209,7 +289,7 @@ yarn add gl-react-expo@^4.0.1
 yarn add buffer@^5.4.3
 ```
 
-## Installation on React Web
+### Installation on React Web
 
 ```
 npm i --save react-native-gl-image-filters
@@ -223,8 +303,9 @@ yarn add gl-react@^4.0.1
 yarn add gl-react-dom@^4.0.1
 ```
 
+## Usage
 
-### Usage
+### Usage with React Native
 ```javascript
 import React, { Component } from 'react';
 import {

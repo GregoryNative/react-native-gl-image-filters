@@ -1,6 +1,7 @@
+// @ts-ignore
 import * as React from 'react';
 
-export type FiltersProps = {
+export type IFiltersProps = {
   /**
    * Value of hue
    */
@@ -43,7 +44,7 @@ export type FiltersProps = {
   exposure?: number
 }
 
-export type ImageFiltersProps = FiltersProps & {
+export type IImageFiltersProps = IFiltersProps & {
   /**
    * A floating-point number that determines width of image container
    */
@@ -58,8 +59,34 @@ export type ImageFiltersProps = FiltersProps & {
   children: React.ReactElement<any>;
 }
 
-export default function ImageFilters(props: ImageFiltersProps): React.ReactElement<{}>;
+export default function ImageFilters(props: IImageFiltersProps): React.ReactElement<{}>;
 
-export type Constants = {
-  DefaultValues: FiltersProps;
+type IDefaultPreset = {
+  name: string;
+  description: string;
+  preset: IFiltersProps;
+}
+
+export interface Constants {
+  DefaultValues: Required<IFiltersProps>;
+  DefaultPresets: Array<IDefaultPreset>;
+}
+
+export interface Presets {
+  NoPreset: IFiltersProps;
+  AmaroPreset: IFiltersProps;
+  ClarendonPreset: IFiltersProps;
+  DogpatchPreset: IFiltersProps;
+  GinghamPreset: IFiltersProps;
+  GinzaPreset: IFiltersProps;
+  HefePreset: IFiltersProps;
+  LudwigPreset: IFiltersProps;
+  SkylinePreset: IFiltersProps;
+  SlumberPreset: IFiltersProps;
+  SierraPreset: IFiltersProps;
+  StinsonPreset: IFiltersProps;
+}
+
+export interface Utils {
+  createPreset: (properties: IFiltersProps) => IFiltersProps;
 }
