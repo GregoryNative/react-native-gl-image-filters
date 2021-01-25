@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../src/presets/SierraPreset.js"],"names":["contrast","saturation"],"mappings":"oEAAA,uC,gBAEe,yBAAa,CAC1BA,SAAU,CAAC,GADe,CAE1BC,WAAY,EAFc,CAAb,C","file":"SierraPreset.js","sourcesContent":["import { createPreset } from '../utils/preset';\n\nexport default createPreset({\n  contrast: -.15,\n  saturation: .1,\n});\n"]}

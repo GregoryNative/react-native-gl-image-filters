@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../src/presets/DogpatchPreset.js"],"names":["contrast","brightness"],"mappings":"oEAAA,uC,gBAEe,yBAAa,CAC1BA,SAAU,GADgB,CAE1BC,WAAY,EAFc,CAAb,C","file":"DogpatchPreset.js","sourcesContent":["import { createPreset } from '../utils/preset';\n\nexport default createPreset({\n  contrast: .15,\n  brightness: .1,\n});\n"]}

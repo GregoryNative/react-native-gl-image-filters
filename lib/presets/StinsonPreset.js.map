@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../src/presets/StinsonPreset.js"],"names":["brightness","sepia"],"mappings":"oEAAA,uC,gBAEe,yBAAa,CAC1BA,WAAY,EADc,CAE1BC,MAAO,EAFmB,CAAb,C","file":"StinsonPreset.js","sourcesContent":["import { createPreset } from '../utils/preset';\n\nexport default createPreset({\n  brightness: .1,\n  sepia: .3,\n});\n"]}
