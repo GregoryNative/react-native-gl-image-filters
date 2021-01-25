@@ -1,7 +1,7 @@
-import { Shaders, Node, GLSL } from "gl-react";
-import React from "react";
+import { Shaders, Node, GLSL } from 'gl-react';
+import React from 'react';
 
-import mixArrays from "../utils/mixArrays";
+import mixArrays from '../utils/mixArrays';
 
 const shaders = Shaders.create({
   sepia: {
@@ -18,7 +18,9 @@ const shaders = Shaders.create({
   }
 });
 
-export default function Sepia({ factor = 0, children: t }) {
+export const DefaultValue = 0;
+
+export default function Sepia({ factor = DefaultValue, children: t }) {
   const sepia = mixArrays([
     1, 0, 0, 0,
     0, 1, 0, 0,

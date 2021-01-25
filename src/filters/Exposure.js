@@ -1,7 +1,7 @@
-import { Shaders, Node, GLSL } from "gl-react";
-import React from "react";
+import { Shaders, Node, GLSL } from 'gl-react';
+import React from 'react';
 
-import * as ShadersFunctions from "../utils/shaders-functions";
+import * as ShadersFunctions from '../utils/shaders-functions';
 
 const shaders = Shaders.create({
   exposure: {
@@ -54,7 +54,9 @@ const shaders = Shaders.create({
   }
 });
 
-export default function Exposure({ exposure = 0, children: t }) {
+export const DefaultValue = 0;
+
+export default function Exposure({ exposure = DefaultValue, children: t }) {
   return (
     <Node
       shader={shaders.exposure}

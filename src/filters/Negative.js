@@ -1,5 +1,5 @@
-import { Shaders, Node, GLSL } from "gl-react";
-import React from "react";
+import { Shaders, Node, GLSL } from 'gl-react';
+import React from 'react';
 
 const shaders = Shaders.create({
   negative: {
@@ -18,7 +18,9 @@ const shaders = Shaders.create({
   }
 });
 
-export default function Negative({ factor = 0, children: t }) {
+export const DefaultValue = 0;
+
+export default function Negative({ factor = DefaultValue, children: t }) {
   return (
     <Node
       shader={shaders.negative}
