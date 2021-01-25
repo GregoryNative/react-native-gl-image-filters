@@ -1,7 +1,7 @@
-import { Shaders, Node, GLSL } from "gl-react";
-import React from "react";
+import { Shaders, Node, GLSL } from 'gl-react';
+import React from 'react';
 
-import * as ShadersFunctions from "../utils/shaders-functions";
+import * as ShadersFunctions from '../utils/shaders-functions';
 
 const shaders = Shaders.create({
   exposure: {

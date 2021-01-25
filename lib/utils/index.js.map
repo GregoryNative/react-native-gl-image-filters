@@ -1,1 +1,1 @@
-{"version":3,"sources":["../../src/utils/index.js"],"names":["Utils","createPreset"],"mappings":"oGAEMA,MAAQ,CACZC,iCADY,C,iBAICD,K","file":"index.js","sourcesContent":["import { createPreset } from \"./preset\";\n\nconst Utils = {\n  createPreset,\n};\n\nexport default Utils;\n"]}
+{"version":3,"sources":["../../src/utils/index.js"],"names":["Utils","createPreset"],"mappings":"oGAEMA,MAAQ,CACZC,iCADY,C,iBAICD,K","file":"index.js","sourcesContent":["import { createPreset } from './preset';\n\nconst Utils = {\n  createPreset,\n};\n\nexport default Utils;\n"]}

@@ -1,4 +1,4 @@
-import { createPreset } from "./preset";
+import { createPreset } from './preset';
 
 const Utils = {
   createPreset,

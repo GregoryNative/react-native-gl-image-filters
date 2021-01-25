@@ -1,7 +1,7 @@
-import { Shaders, Node, GLSL } from "gl-react";
-import React from "react";
+import { Shaders, Node, GLSL } from 'gl-react';
+import React from 'react';
 
-import mixArrays from "../utils/mixArrays";
+import mixArrays from '../utils/mixArrays';
 
 const shaders = Shaders.create({
   sepia: {

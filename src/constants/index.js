@@ -1,5 +1,5 @@
-import DefaultValues from "./DefaultValues";
-import DefaultPresets from "./Presets";
+import DefaultValues from './DefaultValues';
+import DefaultPresets from './Presets';
 
 const Constants = Object.freeze({
   DefaultValues,

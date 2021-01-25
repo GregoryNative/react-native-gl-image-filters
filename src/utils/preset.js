@@ -1,4 +1,4 @@
-import DefaultValues from "../constants/DefaultValues";
+import DefaultValues from '../constants/DefaultValues';
 
 export function createPreset(filters) {
   return Object.keys(filters).reduce((result, filterItem) => {

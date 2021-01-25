@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import Sepia from "./filters/Sepia";
-import Hue from "./filters/Hue";
-import Blur from "./filters/Blur";
-import Sharpen from "./filters/Sharpen";
-import Negative from "./filters/Negative";
-import Temperature from "./filters/Temperature";
-import ContrastSaturationBrightness from "./filters/ContrastSaturationBrightness";
-import Exposure from "./filters/Exposure";
+import Sepia from './filters/Sepia';
+import Hue from './filters/Hue';
+import Blur from './filters/Blur';
+import Sharpen from './filters/Sharpen';
+import Negative from './filters/Negative';
+import Temperature from './filters/Temperature';
+import ContrastSaturationBrightness from './filters/ContrastSaturationBrightness';
+import Exposure from './filters/Exposure';
 
 const ImageFiltersComponent = ({
   children,

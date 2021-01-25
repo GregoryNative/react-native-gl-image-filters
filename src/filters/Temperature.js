@@ -1,5 +1,5 @@
-import { Shaders, Node, GLSL } from "gl-react";
-import React from "react";
+import { Shaders, Node, GLSL } from 'gl-react';
+import React from 'react';
 
 const shaders = Shaders.create({
   temperature: {

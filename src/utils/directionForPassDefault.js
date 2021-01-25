@@ -12,4 +12,4 @@ export default function directionForPassDefault(p, factor, total) {
     case 3:
       return [f * NORM, -f * NORM];
   }
-};
+}

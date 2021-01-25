@@ -1,7 +1,7 @@
-import { Shaders, Node, GLSL } from "gl-react";
-import React from "react";
+import { Shaders, Node, GLSL } from 'gl-react';
+import React from 'react';
 
-import directionForPassDefault from "../utils/directionForPassDefault";
+import directionForPassDefault from '../utils/directionForPassDefault';
 
 const shaders = Shaders.create({
   blur: {
