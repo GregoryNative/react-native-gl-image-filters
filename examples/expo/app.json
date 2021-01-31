@@ -1,15 +1,13 @@
 {
   "expo": {
-    "name": "Blank Template",
+    "name": "Expo example for react-native-gl-image-filters",
     "slug": "example-expo",
     "privacy": "public",
-    "sdkVersion": "36.0.0",
     "platforms": [
       "ios",
-      "android",
-      "web"
+      "android"
     ],
-    "version": "1.0.0",
+    "version": "0.3.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
