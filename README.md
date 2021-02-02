@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="react-native-gl-image-filters is released under the MIT license." />
   </a>
   <a href="https://www.npmjs.org/package/react-native-gl-image-filters">
-    <img src="https://badge.fury.io/js/react-native-gl-image-filters.svg" alt="Current npm package version." />
+    <img src="https://img.shields.io/npm/v/react-native-gl-image-filters" alt="Current npm package version." />
   </a>
   <a href="https://www.npmjs.com/package/react-native-gl-image-filters">
     <img src="https://img.shields.io/npm/dm/react-native-gl-image-filters.svg" alt="Current npm package downloads." />
@@ -17,7 +17,7 @@
     <img src="https://badgen.net/badge/expo/snack/blue?icon=https://symbols.getvecta.com/stencil_79/82_expo-icon.11a3983570.svg" alt="Expo snack." />
   </a>
   <a href="https://stackblitz.com/edit/react-native-gl-image-filters-web-example">
-    <img src="https://badgen.net/badge/web/blitz/purple?icon=bitcoin-lightning" alt="Expo snack." />
+    <img src="https://badgen.net/badge/web/blitz/purple?icon=bitcoin-lightning" alt="Stackblitz project." />
   </a>
 </p>
 
