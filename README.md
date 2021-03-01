@@ -65,9 +65,9 @@ Table of Contents
 
 ## API
 - [`Props`](#props)
-- 🆕 [`Constants`](#constants)
-- 🆕 [`Presets`](#presets)
-- 🆕 [`Utils`](#utils)
+- [`Constants`](#constants)
+- [`Presets`](#presets)
+- [`Utils`](#utils)
 
 ### `Props`
 Props for ImageFilters Component
@@ -87,10 +87,11 @@ Props for ImageFilters Component
 | brightness | Brightness filter | Number |   | 1 |
 | temperature | Temperature filter | Number |   | 6500 |
 | exposure | Exposure filter | Number |   | 0 |
+| 🆕 colorOverlay | Color Overlay with the length of 4 (RGBA format). Values must be a real value between 0 and 255. | Array |   | [0.0, 0.0, 0.0, 0.0] |
 
 ### `Constants`
-- 🆕 [`DefaultValues`](#defaultvalues)
-- 🆕 [`DefaultPresets`](#defaultpresets)
+- [`DefaultValues`](#defaultvalues)
+- [`DefaultPresets`](#defaultpresets)
 
 #### `DefaultValues`
 Can be used to set filter to default one manually. 
@@ -107,6 +108,7 @@ interface DefaultValues {
   contrast: number;
   saturation: number;
   exposure: number;
+  colorOverlay: Array<number>;
 }
 ```
 

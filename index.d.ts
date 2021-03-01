@@ -41,7 +41,11 @@ export type IFiltersProps = {
   /**
    * Value of exposure
    */
-  exposure?: number
+  exposure?: number,
+  /**
+   * Value of color overlay
+   */
+  colorOverlay?: Array<number>,
 }
 
 export type IImageFiltersProps = IFiltersProps & {
@@ -91,4 +95,4 @@ export interface Utils {
   createPreset: (properties: IFiltersProps) => IFiltersProps;
 }
 
-export default function ImageFilters(props: ImageFiltersProps): React.ReactElement<{}>;
+export default function ImageFilters(props: IImageFiltersProps): React.ReactElement<{}>;
