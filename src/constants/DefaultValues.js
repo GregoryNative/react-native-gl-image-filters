@@ -6,6 +6,7 @@ import { DefaultValue as NegativeDefaultValue } from '../filters/Negative';
 import { DefaultValue as TemperatureDefaultValue } from '../filters/Temperature';
 import { DefaultValue as ContrastSaturationBrightnessDefaultValue } from '../filters/ContrastSaturationBrightness';
 import { DefaultValue as ExposureDefaultValue } from '../filters/Exposure';
+import { DefaultValue as ColorOverlayDefaultValue } from '../filters/ColorOverlay';
 
 const DefaultValues = Object.freeze({
   sepia: SepiaDefaultValue,
@@ -18,6 +19,7 @@ const DefaultValues = Object.freeze({
   contrast: ContrastSaturationBrightnessDefaultValue.contrast,
   saturation: ContrastSaturationBrightnessDefaultValue.saturation,
   exposure: ExposureDefaultValue,
+  colorOverlay: ColorOverlayDefaultValue,
 });
 
 export default DefaultValues;

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Surface } from 'gl-react-dom';
 import { AppBar, Button, Toolbar, Typography } from '@material-ui/core';
 
-import ImageFilters from 'react-native-gl-image-filters';
+import ImageFilters, { Constants } from 'react-native-gl-image-filters';
 
 import Filter from './Filter';
 
@@ -55,6 +55,13 @@ const settings = [
     minValue: -1.0,
     maxValue: 1.0,
   },
+  {
+    component: 'Spacer',
+  },
+  {
+    name: 'colorOverlay',
+    component: 'ColorPicker',
+  }
 ];
 
 export default class App extends Component {
@@ -63,16 +70,7 @@ export default class App extends Component {
 
     this.state = {
       ...settings,
-      hue: 0,
-      blur: 0,
-      sepia: 0,
-      sharpen: 0,
-      negative: 0,
-      contrast: 1,
-      saturation: 1,
-      brightness: 1,
-      temperature: 6500,
-      exposure: 0,
+      ...Constants.DefaultValues,
     };
   };
 
@@ -85,7 +83,7 @@ export default class App extends Component {
 
   resetImage = () => {
     this.setState({
-      ...ImageFilters.Constants.DefaultValues,
+      ...Constants.DefaultValues,
     });
   }
 
@@ -108,7 +106,8 @@ export default class App extends Component {
           >
             <ImageFilters
               {...this.state}
-              width={SURFACE_SIZE} height={SURFACE_SIZE}
+              width={SURFACE_SIZE}
+              height={SURFACE_SIZE}
             >
               https://i.imgur.com/5EOyTDQ.jpg
             </ImageFilters>
@@ -116,13 +115,13 @@ export default class App extends Component {
         </header>
         {settings.map(filter => (
           <Filter
-            key={filter.name}
             name={filter.name}
             value={this.state[filter.name]}
             defaultValue={this.state[filter.name]}
             minimum={filter.minValue}
             maximum={filter.maxValue}
             step={filter.step}
+            component={filter.component}
             onChange={value => this.setState({[filter.name]: value})}
           />
         ))}

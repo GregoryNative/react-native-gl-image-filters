@@ -8,6 +8,7 @@ import Negative from './filters/Negative';
 import Temperature from './filters/Temperature';
 import ContrastSaturationBrightness from './filters/ContrastSaturationBrightness';
 import Exposure from './filters/Exposure';
+import ColorOverlay from './filters/ColorOverlay';
 
 const ImageFiltersComponent = ({
   children,
@@ -22,7 +23,8 @@ const ImageFiltersComponent = ({
   saturation,
   brightness,
   temperature,
-  exposure
+  exposure,
+  colorOverlay
 }) => {
   return (
     <Sepia factor={sepia}>
@@ -35,11 +37,13 @@ const ImageFiltersComponent = ({
                 saturation={saturation}
                 brightness={brightness}
               >
-                <Blur factor={blur} passes={4} height={height} width={width}>
-                  <Sharpen factor={sharpen} height={height} width={width}>
-                    {children}
-                  </Sharpen>
-                </Blur>
+                <ColorOverlay factor={colorOverlay}>
+                  <Blur factor={blur} passes={4} height={height} width={width}>
+                    <Sharpen factor={sharpen} height={height} width={width}>
+                      {children}
+                    </Sharpen>
+                  </Blur>
+                </ColorOverlay>
               </ContrastSaturationBrightness>
             </Temperature>
           </Negative>

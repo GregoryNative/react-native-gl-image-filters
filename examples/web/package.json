@@ -7,13 +7,14 @@
     "gl-react": "^4.0.1",
     "gl-react-dom": "^4.0.1",
     "react": "^16.13.1",
+    "react-color": "^2.19.3",
     "react-dom": "^16.13.1",
     "react-native-gl-image-filters": "file:../../",
     "react-native-web": "^0.12.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "4.0.2"
   },
   "scripts": {
-    "preinstall": "cd ../.. && yarn && yarn compile",
+    "preinstall": "cd ../.. && npm run compile",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

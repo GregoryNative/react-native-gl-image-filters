@@ -94,3 +94,15 @@ export const SetSat = `
     return res;
   }
 `;
+
+export const Mix = `
+  vec3 Mix(vec3 a, vec3 b, float opacity) {
+    return mix(a, b, opacity);
+  }
+`;
+
+export const ClampRGBVec3 = `
+  vec3 ClampRGBVec3(vec3 c) {
+    return clamp(c / 255.0, 0.0, 1.0);
+  }
+`;
