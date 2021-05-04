@@ -10,6 +10,7 @@ public class BasePackageList {
         new expo.modules.constants.ConstantsPackage(),
         new expo.modules.filesystem.FileSystemPackage(),
         new expo.modules.gl.GLPackage(),
+        new expo.modules.imageloader.ImageLoaderPackage(),
         new expo.modules.permissions.PermissionsPackage()
     );
   }

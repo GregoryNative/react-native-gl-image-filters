@@ -1,8 +1,9 @@
-platform :ios, '10.0'
+platform :ios, '11.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 require_relative '../node_modules/react-native-unimodules/cocoapods.rb'
 
 target 'imagefilters' do
+  use_unimodules!
   # Pods for imagefilters
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
@@ -41,7 +42,6 @@ target 'imagefilters' do
   end
 
   use_native_modules!
-  use_unimodules!
 end
 
 target 'imagefilters-tvOS' do

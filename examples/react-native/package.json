@@ -7,18 +7,16 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint .",
-    "postinstall": "cd ../.. && npm run compile"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "buffer": "^5.4.3",
     "gl-react": "^4.0.1",
     "gl-react-native": "^4.0.1",
-    "native-base": "^2.13.8",
+    "native-base": "^2.15.2",
     "react": "16.9.0",
     "react-native": "0.61.5",
-    "react-native-gl-image-filters": "file:../../",
-    "react-native-unimodules": "^0.7.0"
+    "react-native-gl-image-filters": "^0.4.0",
+    "react-native-unimodules": "^0.13.3"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
