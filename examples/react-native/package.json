@@ -14,7 +14,7 @@
     "gl-react-native": "^4.0.1",
     "native-base": "^2.15.2",
     "react": "16.9.0",
-    "react-native": "0.61.5",
+    "react-native": "0.62.3",
     "react-native-gl-image-filters": "^0.4.0",
     "react-native-unimodules": "^0.13.3"
   },
