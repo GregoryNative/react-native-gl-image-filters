@@ -1,4 +1,4 @@
-[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-personal-page.svg)](https://stand-with-ukraine.pp.ua)
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua)
 <h1 align="center">
   <img width="32" alt="icon" src="https://raw.githubusercontent.com/GregoryNative/react-native-gl-image-filters/docusaurus/website/static/img/favicon_32.ico">
   react-native-gl-image-filters
